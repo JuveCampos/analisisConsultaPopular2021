@@ -1,0 +1,131 @@
+*************************************************************************
+*	 	CONSULTA POPULAR FEDERAL  | 2021						
+*																		
+*		Cómputos Distritales											
+*************************************************************************
+
+A. El Sistema de Cómputos de la Consulta Popular 2021 permite la descarga de la base de datos a través de un archivo zip, el cual contiene el archivo de resultados (en formato CSV), el catálogo de secciones que integran a las Unidades Territoriales (en formato CSV) y, el presente archivo con la descripción de cada una de las variables del archivo de resultados (LÉEME).
+
+B. El archivo de resultados (en formato CSV) contiene la información de todas las Actas de la Jornada de la Consulta Popular y de Escrutinio y Cómputo de la Mesa Receptora (en adelante Actas), de la base de datos y se nombra, conforme a la fecha y hora de corte de la información como "20210801-2000_COMPUTOS-INE-CP2021.csv".
+
+C. La información en el archivo CSV se divide en dos secciones:
+
+    a. Primera sección, encabezado: 
+
+        i. Se presenta la fecha y la hora de la generación de los archivos; éstas corresponden a las que aparecen en el sitio web de publicación, ejemplo:
+            01/08/2021 20:00 (UTC-5)
+     
+        ii. Se presenta el estatus de las Actas que se están incluyendo en la base de datos y sus respectivos porcentajes calculados, separados por pipes "|", ejemplo:
+	
+            ACTAS_ESPERADAS|ACTAS_COMPUTADAS|PORCENTAJE_ACTAS_COMPUTADAS|LISTA_NOMINAL|TOTAL_OPINIONES|PORCENTAJE_PARTICIPACION_CIUDADANA
+
+            La descripción de cada campo se muestra a continuación:
+
+            1. ACTAS_ESPERADAS - Número de Actas de todas las Mesas Receptoras de la Consulta Popular (MRCP) aprobadas por las Juntas Distritales Ejecutivas que correspondan. Este conjunto de Actas conforma el Catálogo de Actas esperadas.
+
+            2. ACTAS_COMPUTADAS - Número de Actas de las MRCP aprobadas, de las cuales se tiene su correspondiente Acta al momento del corte de información. 
+
+            3. PORCENTAJE_ACTAS_COMPUTADAS - Porcentaje de Actas computadas al momento del corte de información, calculado respecto del total de Actas esperadas. Los decimales son expresados a cuatro posiciones; el decimal de la cuarta posición es truncado y no redondeado.   
+
+            4. LISTA_NOMINAL - Es el agregado del número de ciudadanas y ciudadanos con derecho a emitir opinión en las MRCP.
+
+            5. TOTAL_OPINIONES - Agregado de la suma de opiniones emitidas de Actas computadas. El total de opiniones, se calcula mediante la suma que realiza automáticamente el sistema informático de Cómputos.
+
+            6. PORCENTAJE_PARTICIPACION_CIUDADANA - Porcentaje de ciudadanas y ciudadanos que emitieron su opinión con base en la lista nominal, cuyas Actas ya han sido computadas. 
+		
+
+    b.  Segunda sección, datos del Acta. Corresponde a los datos de identificación del Acta, extraídos de la base de datos; cada línea corresponde a un Acta, están separados por pipes "|". Los datos son los siguientes:
+
+      
+        CLAVE_MRCP|ID_ENTIDAD|ENTIDAD|ID_DISTRITO_FEDERAL|DISTRITO_FEDERAL|SECCION_SEDE|TIPO_MRCP|ID_MRCP|OPINION_SI|OPINION_NO|NULOS|TOTAL_OPINIONES|LISTA_NOMINAL_MRCP|OBSERVACIONES|RECUENTO_TOTAL|FECHA_HORA
+
+        1. CLAVE_MRCP - Clave única de MRCP. Se conforma por la concatenación de las variables:	
+                        
+			- ID_ENTIDAD, a dos dígitos.
+			- SECCION_SEDE, a cuatro dígitos.
+			- TIPO_MRCP, a un carácter.
+			- ID_MRCP, a dos dígitos.
+		
+			Por ejemplo: 
+					010355B01
+
+        2. ID_ENTIDAD - Muestra el identificador de la Entidad.
+
+        3. ENTIDAD - Indica el nombre de la Entidad Federativa a la que corresponde el Acta.
+
+        4. ID_DISTRITO_FEDERAL - Número del Distrito Electoral Federal.	
+
+        5. DISTRITO_FEDERAL - Nombre del Distrito Electoral Federal.
+
+        6. SECCION_SEDE - Corresponde a la clave de la sección electoral sede de la Unidad Territorial de la Consulta Popular (UTCP).
+
+        7. TIPO_MRCP - Se refiere al tipo de la MRCP: 
+
+                        B.- Básica
+
+                        C.- Contigua
+
+        8. ID_MRCP - Número identificador de la MRCP. 
+
+        9. OPINION_SI - Número de opiniones en sentido "SÍ".
+
+        10. OPINION_NO - Número de opiniones en sentido "NO".
+
+        11. NULOS - Número de opiniones nulas.
+
+        12. TOTAL_OPINIONES -  Suma de las opiniones emitidas en sentido (Sí, No y Nulos) de Actas computadas. El total de opiniones se calcula mediante la suma que realiza automáticamente el sistema informático de Cómputos.
+
+        13. LISTA_NOMINAL_MRCP-  Número de ciudadanas y ciudadanos con derecho a emitir opinión que integran la lista nominal de cada MRCP.
+
+        14. OBSERVACIONES - Indica con la leyenda:
+
+                * Actas de mesas receptoras - Actas computadas por las Juntas Distritales Federales de aquellos paquetes que no presentan muestras de alteración y contienen los expedientes de las MRCP, cuyas Actas son legibles y sin inconsistencias.
+			-En caso de que el paquete no contenga papeletas, se asienta como "Actas de mesas receptoras (Paquete sin papeletas)"
+			-En caso de que la MRCP fue instalada, sin embargo, se suspendió de manera definitiva la emisión de opiniones en algún momento de la Jornada, no obstante se cuenta con el Acta; se asienta como "Actas de mesas receptoras (MRCP instalada con suspensión definitiva de la votación)".
+
+		* Actas de paquetes de recuento - Un paquete es objeto de recuento de opiniones cuando:
+                        -Los resultados de las Actas no sean legibles.
+                        -Se detecten errores o alteraciones evidentes en las Actas que generen duda fundada sobre los resultados que consigna.
+                        -No se encuentre el Acta en el expediente de la MRCP.
+                        -El paquete se haya recibido con muestras de alteración.
+			-En caso de que el paquete no contenga papeletas, se asienta como "Actas de paquetes de recuento (Paquete sin papeletas)"
+
+                * Actas de MRCP instaladas de paquetes no recibidos - Cuando no se cuenta con el Acta, debido a que, al término de la Jornada de Consulta Popular, el paquete no es recibidos en la sede de la Junta Distrital.
+
+		* Actas no recibidas de Mesas Receptoras no instaladas - Cuando no se cuenta con el Acta, debido a que el día de la Jornada de Consulta Popular alguna o varias MRCP no fueron instaladas.
+
+	15. RECUENTO_TOTAL - Si al término del cómputo en un Distrito Electoral Federal se establece que la diferencia entre el “SÍ” y “NO” es igual o menor a un punto porcentual, la Junta Distrital Ejecutiva realiza el recuento de opiniones de la totalidad de las MRCP; en razón de lo anterior, se señalan como:
+    
+		* SI - MRCP objeto de recuento total de opiniones emitidas. 
+ 		* NO - MRCP que no fue objeto de recuento total de opiniones emitidas.
+
+	16. FECHA_HORA - Fecha y hora de captura del Acta (Tiempo del Centro).
+
+
+D. El archivo de Unidades Territoriales (en formato CSV) contiene la información de todas las secciones electorales que integran las mismas y se nombra como "CATALOGO-UNIDADES-TERRITORIALES_INE-CP2021.csv". Cada línea corresponde a una sección electoral, están separados por pipes "|". Los datos son los siguientes:
+
+      
+        ID_ENTIDAD|ENTIDAD|ID_DISTRITO_FEDERAL|DISTRITO_FEDERAL|SECCION|UNIDAD_TERRITORIAL|SEDE
+
+
+        1. ID_ENTIDAD - Muestra el identificador de la Entidad.
+
+	2. ENTIDAD - Indica el nombre de la Entidad Federativa a la que corresponde la sección electoral.
+ 	
+	3. ID_DISTRITO_FEDERAL - Número del Distrito Electoral Federal.	
+
+        4. DISTRITO_FEDERAL - Nombre del Distrito Electoral Federal.
+
+	5. SECCION - Corresponde a la clave de la sección electoral de la UTCP.
+
+        6. UNIDAD_TERRITORIAL - División geográfica que considera al menos una sección o un grupo de secciones electorales. Cada UTCP tiene una sección electoral sede en la que se ubican las MRCP.
+
+        7. SEDE - Indica si la sección es sede de la UTCP asociada; los valores que puede tomar son los siguientes:
+		
+		* SI - La sección electoral es sede de la UTCP. 
+ 		* NO - La sección electoral forma parte alguna UTCP, no obstante, no es la sede de esta.
+
+
+
+
+                       
