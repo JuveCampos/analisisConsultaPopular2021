@@ -26,3 +26,31 @@ Para instalarlas, se puede utilizar la siguiente función:
 # Instalar paquetes
 install.packages(c("sf", "tidyverse","scales","ggtext", "leaflet", "waffle"))
 ```
+
+Igualmente, para descargar los datos a nivel sección, seguir las instrucciones que vienen en el script que los requiere. 
+
+## Visualizaciones: 
+
+A continuación vienen las visualizaciones que se incluyeron en el artículo: 
+
+![](https://raw.githubusercontent.com/JuveCampos/analisisConsultaPopular2021/main/03_Resultados/imagenes/01_waffle_participación.png)
+
+![](https://raw.githubusercontent.com/JuveCampos/analisisConsultaPopular2021/main/03_Resultados/imagenes/02_participacion_estatal.png)
+
+![](https://raw.githubusercontent.com/JuveCampos/analisisConsultaPopular2021/main/03_Resultados/imagenes/03_mapa_participacion.png)
+
+![](https://github.com/JuveCampos/analisisConsultaPopular2021/blob/main/03_Resultados/imagenes/04_opiniones_entidad.png)
+
+![](https://github.com/JuveCampos/analisisConsultaPopular2021/blob/main/03_Resultados/imagenes/05_top_20_municipios_participacion.png)
+
+![](https://raw.githubusercontent.com/JuveCampos/analisisConsultaPopular2021/main/03_Resultados/imagenes/06_top_20_participaciones.png)
+
+![](https://raw.githubusercontent.com/JuveCampos/analisisConsultaPopular2021/main/03_Resultados/imagenes/07_mapa_porcentaje_participacion.png)
+
+![](https://raw.githubusercontent.com/JuveCampos/analisisConsultaPopular2021/main/03_Resultados/imagenes/08_mapa_porcentaje_participacion_quintiles.png)
+
+![](https://raw.githubusercontent.com/JuveCampos/analisisConsultaPopular2021/main/03_Resultados/imagenes/09_mesas_por_entidad.png)
+
+![](https://raw.githubusercontent.com/JuveCampos/analisisConsultaPopular2021/main/03_Resultados/imagenes/10_porcentajes_part_promedio_mesa.png)
+
+
